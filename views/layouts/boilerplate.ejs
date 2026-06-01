@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+
+    <!-- to add custom styling we use the below style sheet alaong with the bootstrap styling -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- import the bootstrap link from the bootstrap website the below is for styling  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+
+    <!-- to include the icons from font awsome we need cdn link of font awesom so that the icons can be viewed -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <!-- link from google fonts for our own fonts for the website  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="/css/review.css">
+
+    <!-- style sheet and js for maps from mapbox we are pasting here -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.js"></script>
+</head>
+<body>
+
+    <!-- here we are keeping the navbar common for every page extraced from includes folder -->
+    <%- include("../includes/navbar.ejs") %>
+
+    <!--keeping the body of each and every ejs template different -->
+    <div class="container">
+        <!-- here we want a flash message for success on the top so include flash.ejs  -->
+        <%- include("../includes/flash.ejs") %>
+        <%- body %>
+    </div>
+
+    <!-- here we are keeping the footer common for every page extraced from includes folder -->
+    <%- include("../includes/footer.ejs") %>
+
+    <!-- import the bootstrap link from the bootstrap website the below is for javascript  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous">
+    </script>
+    <script src="/js/script.js"></script><!--it is the script file in which logic written for needs validation class of bootstrap-->
+</body>
+</html>
